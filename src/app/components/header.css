@@ -1,0 +1,69 @@
+.lateral-menu {
+  position: fixed;
+  top: 0;
+  right: 0;
+  display: flex;
+}
+
+.icon-menu {
+  /* 1A - Make burguer menu stay behind the navigation menu */
+  position: relative;
+
+  margin-top: 15px;
+  margin-right: 15px;
+  cursor: pointer;
+}
+
+.icon-closed {
+  align-self: flex-end;
+}
+
+.barra-menu {
+  /* 1A - Complement */
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  transition: 0.3s all;
+  background: #FFFFFF 0% 0% no-repeat padding-box;
+  /* box-shadow: -5px 0px 20px #000000AB; */
+  opacity: 0.91;
+  height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+}
+
+.barra-menu-closed {
+  width: 0;
+}
+
+.barra-menu-opened {
+  width: 400px;
+}
+
+.barra-menu li {
+  list-style: none;
+  line-height: 61px;
+  width: 100%;
+}
+
+.barra-menu a {
+  color: #F98988;
+  text-decoration: none;
+  font: normal normal 300 42px/51px Roboto;
+  /* letter-spacing: 5px; */
+  opacity: 1;
+  transition: 0.5s all;
+
+}
+
+.barra-menu a:hover {
+  color: #fff;
+  .item {
+  background-color: #F98988;
+
+  }
+}

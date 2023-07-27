@@ -4,10 +4,37 @@ import Header from './components/Header'
 
 export default function Home() {
   return (
-    <div>
-      <Header />
-      <h1>Conteúdo da página</h1>
-    </div>
+    <>
+      <header>
+        <section>
+        <Image
+          width={50}
+          height={50}
+          src="/assets/iyf-full-logo-branco.png"
+          alt="logo"
+        />
+        <Image
+          width={24}
+          height={24}
+          src="/assets/Youtube.png"
+          alt="logo"
+        />
+        <Image
+          width={24}
+          height={24}
+          src="/assets/Instagram.png"
+          alt="logo"
+        />
+        <Image
+          width={24}
+          height={24}
+          src="/assets/facebook.png"
+          alt="logo"
+        />
+        </section>
+      </header>
+    <Header />
+    </>
   )
 }
 

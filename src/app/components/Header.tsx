@@ -1,8 +1,8 @@
 "use client"
 import React, { useState } from "react";
 import { FaBars } from "react-icons/fa";
-import "./Header.css";
-import Image from "next/image";
+import { AiOutlineClose } from "react-icons/ai";
+import "./header.css";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -12,26 +12,31 @@ const Header = () => {
   };
 
   return (
-    <aside>
-      {/* <Image
-        width={100}
-        height={100}
-        src="/facebook.png"
-        alt="logo"
-      /> */}
-
-      <div >
-        <FaBars style={{fontSize: '24px'}} className="icon-menu" onClick={toggleMenu} />
+    <aside className="lateral-menu">
+      
+      <div>
+        <FaBars
+          style={{fontSize: '24px', color: "white"}}
+          className="icon-menu" 
+          onClick={toggleMenu} 
+        />
       </div>
 
       <div className={`barra-menu ${isMenuOpen ? 'barra-menu-opened' : 'barra-menu-closed'}`}>
-        <button type="button" onClick={toggleMenu}>X</button>
-        <ul>
-          <li><a href="#">Institucional</a></li>
+        
+        <AiOutlineClose
+          style={{fontSize: '24px', color: "#F98988"}}
+          className="icon-closed"
+          onClick={toggleMenu} 
+        />
+
+        <ul className="navigation-list">
+          <li className="item"><a href="#">Institucional</a></li>
           <li><a href="#">Cultura</a></li>
           <li><a href="#">Educação</a></li>
           <li><a href="#">Social</a></li>
         </ul>
+
       </div>
 
     </aside>
