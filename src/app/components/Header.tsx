@@ -24,14 +24,17 @@ const Header = () => {
 
       <div className={`barra-menu ${isMenuOpen ? 'barra-menu-opened' : 'barra-menu-closed'}`}>
         
-        <AiOutlineClose
-          style={{fontSize: '24px', color: "#F98988"}}
-          className="icon-closed"
-          onClick={toggleMenu} 
-        />
+        <div className="icon-closed-container">
+          <AiOutlineClose
+            style={{fontSize: '28px', color: "#F98988"}}
+            className="icon-closed"
+            onClick={toggleMenu} 
+          />
+        </div>
 
-        <ul className="navigation-list">
-          <li className="item"><a href="#">Institucional</a></li>
+
+        <ul className="navigation-menu">
+          <li><a href="#">Institucional</a></li>
           <li><a href="#">Cultura</a></li>
           <li><a href="#">Educação</a></li>
           <li><a href="#">Social</a></li>

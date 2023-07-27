@@ -2,7 +2,6 @@
   position: fixed;
   top: 0;
   right: 0;
-  display: flex;
 }
 
 .icon-menu {
@@ -14,8 +13,14 @@
   cursor: pointer;
 }
 
+.icon-closed-container {
+  width: 100%;
+  text-align: end;
+}
+
 .icon-closed {
-  align-self: flex-end;
+  margin-top: 13px;
+  margin-right: 13px;
 }
 
 .barra-menu {
@@ -29,11 +34,14 @@
   /* box-shadow: -5px 0px 20px #000000AB; */
   opacity: 0.91;
   height: 100vh;
+}
 
+.navigation-menu {
+  height: 87%;
   display: flex;
   flex-direction: column;
-  text-align: center;
   justify-content: center;
+  text-align: center;
 }
 
 .barra-menu-closed {
@@ -62,8 +70,5 @@
 
 .barra-menu a:hover {
   color: #fff;
-  .item {
   background-color: #F98988;
-
-  }
 }
