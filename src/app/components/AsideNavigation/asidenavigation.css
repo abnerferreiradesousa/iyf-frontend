@@ -7,9 +7,9 @@
 .icon-menu {
   /* 1A - Make burguer menu stay behind the navigation menu */
   position: relative;
-
-  margin-top: 15px;
-  margin-right: 15px;
+  color: white;
+  margin-top: 54px;
+  margin-right: 40px;
   cursor: pointer;
 }
 
@@ -19,8 +19,9 @@
 }
 
 .icon-closed {
-  margin-top: 13px;
-  margin-right: 13px;
+  margin-top: 53px;
+  margin-right: 38px;
+  cursor: pointer;
 }
 
 .barra-menu {
@@ -31,13 +32,12 @@
 
   transition: 0.3s all;
   background: #FFFFFF 0% 0% no-repeat padding-box;
-  /* box-shadow: -5px 0px 20px #000000AB; */
   opacity: 0.91;
   height: 100vh;
 }
 
 .navigation-menu {
-  height: 87%;
+  height: 75%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -49,26 +49,18 @@
 }
 
 .barra-menu-opened {
-  width: 400px;
+  width: 420px;
 }
 
-.barra-menu li {
-  list-style: none;
-  line-height: 61px;
-  width: 100%;
-}
-
-.barra-menu a {
+.nav-item {
   color: #F98988;
   text-decoration: none;
-  font: normal normal 300 42px/51px Roboto;
-  /* letter-spacing: 5px; */
-  opacity: 1;
-  transition: 0.5s all;
-
+  font: normal normal 300 35px/45px Roboto;
+  line-height: 4rem;
+  transition: 0.4s;
 }
 
-.barra-menu a:hover {
+.nav-item:hover {
   color: #fff;
   background-color: #F98988;
 }

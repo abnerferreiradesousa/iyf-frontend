@@ -1,39 +1,12 @@
-import Image from 'next/image'
-import styles from './page.module.css'
-import Header from './components/Header'
+import AsideNavigation from './components/AsideNavigation/AsideNavigation'
+import Header from './components/Header/Header'
+// import styles from './page.module.css'
 
 export default function Home() {
   return (
     <>
-      <header>
-        <section>
-        <Image
-          width={50}
-          height={50}
-          src="/assets/iyf-full-logo-branco.png"
-          alt="logo"
-        />
-        <Image
-          width={24}
-          height={24}
-          src="/assets/Youtube.png"
-          alt="logo"
-        />
-        <Image
-          width={24}
-          height={24}
-          src="/assets/Instagram.png"
-          alt="logo"
-        />
-        <Image
-          width={24}
-          height={24}
-          src="/assets/facebook.png"
-          alt="logo"
-        />
-        </section>
-      </header>
-    <Header />
+      <Header />
+      <AsideNavigation />
     </>
   )
 }
