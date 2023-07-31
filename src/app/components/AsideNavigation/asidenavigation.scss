@@ -1,3 +1,5 @@
+$baseColor: #F98988;
+
 .lateral-menu {
   position: fixed;
   top: 0;
@@ -7,7 +9,7 @@
 .icon-menu {
   /* 1A - Make burguer menu stay behind the navigation menu */
   position: relative;
-  color: white;
+  color: #fff;
   margin-top: 54px;
   margin-right: 40px;
   cursor: pointer;
@@ -53,7 +55,7 @@
 }
 
 .nav-item {
-  color: #F98988;
+  color: $baseColor;
   text-decoration: none;
   font: normal normal 300 35px/45px Roboto;
   line-height: 4rem;
@@ -62,5 +64,5 @@
 
 .nav-item:hover {
   color: #fff;
-  background-color: #F98988;
+  background-color: $baseColor;
 }

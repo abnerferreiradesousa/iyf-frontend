@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import './Header.css';
+import './Header.scss';
 
 const Header = () => {
   return (

@@ -1,10 +1,9 @@
 "use client"
 import { useState } from "react";
-import Link from 'next/link';
-import { FaBars } from "react-icons/fa";
-import { AiOutlineClose } from "react-icons/ai";
-import "./asidenavigation.css";
+import Link from "next/link";
 import Image from "next/image";
+import { AiOutlineClose } from "react-icons/ai";
+import "./asidenavigation.scss";
 
 const AsideNavigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -15,15 +14,9 @@ const AsideNavigation = () => {
 
   return (
     <aside className="lateral-menu">
-      
-      {/* <FaBars
-        style={{fontSize: '26px', color: "white"}}
-        className="icon-menu" 
-        onClick={toggleMenu} 
-      /> */}
 
       <Image
-        src={'/assets/001-more.png'}
+        src={'/assets/burguer-menu.png'}
         width={26}
         height={26}
         className="icon-menu" 
@@ -34,7 +27,7 @@ const AsideNavigation = () => {
       <section 
         className={`barra-menu ${isMenuOpen ? 'barra-menu-opened' : 'barra-menu-closed'}`}
       >
-        
+
         <section className="icon-closed-container">
           <AiOutlineClose
             style={{fontSize: '28px', color: "#F98988"}}
