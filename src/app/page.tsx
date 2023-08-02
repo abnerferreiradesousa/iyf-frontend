@@ -1,95 +1,88 @@
-import Image from 'next/image'
-import styles from './page.module.css'
+'use client';
+import { useState } from 'react';
+import styles from './page.module.css';
+import Card from './components/Card';
 
 export default function Home() {
+  const [background, setBackground] = useState({
+    color: 'radial-gradient(closest-side at 50% 50%, #FEC1C3 0%, #F98988 100%)',
+    image: '/images/32.webp',
+  });
+
   return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>src/app/page.tsx</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
-      </div>
-
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className={styles.grid}>
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore the Next.js 13 playground.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
+    <main className={styles.main} style={{ background: background.color }}>
+      <div
+        className={styles.backgroundImage}
+        style={{ backgroundImage: `url(${background.image})` }}
+      ></div>
+      <h1>Desafio Mudança União</h1>
+      <div className={styles.cardsContainer}>
+        <Card
+          title="Korea Camp"
+          description="Imersão na cultura inglesa levando esperança"
+          big={true}
+          imageUrl="/images/Julio.webp"
+          onClick={() =>
+            setBackground({
+              color:
+                'radial-gradient(closest-side at 50% 50%, #FEC1C3 0%, #F98988 100%)',
+              image: '/images/32.webp',
+            })
+          }
+        ></Card>
+        <Card
+          title="Good News Corp"
+          description="Vendo a minha juventude para comprar o coração deles"
+          big={false}
+          imageUrl="/images/Missionario.webp"
+          onClick={() =>
+            setBackground({
+              color:
+                'radial-gradient(closest-side at 50% 50%, #bdd5f2 0%, #588eea 100%)',
+              image: '/images/gnc1.webp',
+            })
+          }
+        ></Card>
+        <Card
+          title="World Camp"
+          description="Viaje o mundo em um só lugar!"
+          big={false}
+          imageUrl="/images/WorldCamp.webp"
+          onClick={() =>
+            setBackground({
+              color:
+                'radial-gradient(closest-side at 50% 50%, #FFFCAA 0%, #BEB700 100%)',
+              image: '/images/wc2.webp',
+            })
+          }
+        ></Card>
+        <Card
+          title="Noite Cultural"
+          description="Viaje o mundo em uma noite sem sair do lugar!"
+          big={false}
+          imageUrl="/images/Thayse.webp"
+          onClick={() =>
+            setBackground({
+              color:
+                'radial-gradient(closest-side at 50% 50%, #70DCAF 0%, #0B956B 100%)',
+              image: '/images/mo.webp',
+            })
+          }
+        ></Card>
+        <Card
+          title="English Camp"
+          description="Ganhe esperança English Camp Online 2022"
+          big={false}
+          imageUrl="/images/Voluntaria.webp"
+          onClick={() =>
+            setBackground({
+              color:
+                'radial-gradient(closest-side at 50% 50%, #7DB9FF 0%, #216AE8 100%)',
+              image: '/images/ec-2.webp',
+            })
+          }
+        ></Card>
       </div>
     </main>
-  )
+  );
 }
