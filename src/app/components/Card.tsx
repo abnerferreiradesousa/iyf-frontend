@@ -9,21 +9,19 @@ export default function Card({
   onClick,
 }: CardProps) {
   return (
-    <div className={styles.wrapper}>
+    <div
+      onClick={onClick}
+      className={big ? styles.containerBig : styles.containerSmall}
+    >
       <div
-        onClick={onClick}
-        className={big ? styles.containerBig : styles.containerSmall}
-      >
-        <div
-          className={big ? styles.imageBig : styles.imageSmall}
-          style={{ backgroundImage: `url(${imageUrl})` }}
-        ></div>
-        <div className={big ? styles.textHeaderBig : ''}>
-          <h2>{title}</h2>
-          {big ? <p>{description}</p> : null}
-        </div>
-        {big ? <a onClick={(e) => e.preventDefault()}>Conferir &gt;</a> : null}
+        className={big ? styles.imageBig : styles.imageSmall}
+        style={{ backgroundImage: `url(${imageUrl})` }}
+      ></div>
+      <div className={big ? styles.textHeaderBig : ''}>
+        <h2>{title}</h2>
+        {big ? <p>{description}</p> : null}
       </div>
+      {big ? <a onClick={(e) => e.preventDefault()}>Conferir &gt;</a> : null}
     </div>
   );
 }
