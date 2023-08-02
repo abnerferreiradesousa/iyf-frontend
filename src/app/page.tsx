@@ -2,6 +2,8 @@
 import { useState } from 'react';
 import styles from './page.module.css';
 import Card from './components/Card';
+import AsideNavigation from './components/AsideNavigation/AsideNavigation'
+import Header from './components/Header/Header'
 
 export default function Home() {
   const [background, setBackground] = useState({
@@ -11,6 +13,8 @@ export default function Home() {
 
   return (
     <main className={styles.main} style={{ background: background.color }}>
+      <Header />
+      <AsideNavigation />
       <div
         className={styles.backgroundImage}
         style={{ backgroundImage: `url(${background.image})` }}

@@ -1,0 +1,19 @@
+.header-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-top: 29px;
+    img {
+        margin-right: 10px;
+    }
+}
+
+.header-logo {
+    margin-left: 7rem;
+}
+
+.header-social-media {
+    margin-right: 6rem;
+}
+  
