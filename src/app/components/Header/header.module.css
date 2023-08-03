@@ -1,19 +1,20 @@
-.header-container {
+.headerContainer {
     width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: baseline;
     margin-top: 29px;
-    img {
-        margin-right: 10px;
-    }
 }
 
-.header-logo {
+.headerContainer img {
+    margin-right: 10px;
+}
+
+.headerLogo {
     margin-left: 7rem;
 }
 
-.header-social-media {
+.headerSocial {
     margin-right: 6rem;
 }
   

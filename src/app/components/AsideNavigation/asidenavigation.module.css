@@ -1,12 +1,11 @@
-$baseColor: #F98988;
 
-.lateral-menu {
+.lateralMenu {
   position: fixed;
   top: 0;
   right: 0;
 }
 
-.icon-menu {
+.iconMenu {
   /* 1A - Make burguer menu stay behind the navigation menu */
   position: relative;
   color: #fff;
@@ -15,18 +14,7 @@ $baseColor: #F98988;
   cursor: pointer;
 }
 
-.icon-closed-container {
-  width: 100%;
-  text-align: end;
-}
-
-.icon-closed {
-  margin-top: 53px;
-  margin-right: 38px;
-  cursor: pointer;
-}
-
-.barra-menu {
+.barMenu {
   /* 1A - Complement */
   position: absolute;
   top: 0;
@@ -38,7 +26,26 @@ $baseColor: #F98988;
   height: 100vh;
 }
 
-.navigation-menu {
+.menuClosed {
+  width: 0;
+}
+
+.menuOpened {
+  width: 420px;
+}
+
+.closedContainer {
+  width: 100%;
+  text-align: end;
+}
+
+.iconClosed {
+  margin-top: 53px;
+  margin-right: 38px;
+  cursor: pointer;
+}
+
+.navigationMenu {
   height: 75%;
   display: flex;
   flex-direction: column;
@@ -46,23 +53,15 @@ $baseColor: #F98988;
   text-align: center;
 }
 
-.barra-menu-closed {
-  width: 0;
-}
-
-.barra-menu-opened {
-  width: 420px;
-}
-
-.nav-item {
-  color: $baseColor;
+.navItem {
+  color: #F98988;
   text-decoration: none;
   font: normal normal 300 35px/45px Roboto;
   line-height: 4rem;
   transition: 0.4s;
 }
 
-.nav-item:hover {
+.navItem:hover {
   color: #fff;
-  background-color: $baseColor;
+  background-color: #F98988;
 }
