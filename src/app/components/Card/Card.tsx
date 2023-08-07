@@ -1,31 +1,37 @@
+import Image from 'next/image';
 import styles from './Card.module.css';
 import CardProps from './CardProps';
 
 export default function Card({
   title,
   description,
-  big,
-  imageUrl,
+  activeCard,
+  image,
+  bigImage,
+  imageAlt,
   onClick,
 }: CardProps) {
   return (
     <div
       onClick={onClick}
-      className={big ? styles.containerBig : styles.containerSmall}
-      defaultChecked={big ? true : false}
+      className={activeCard ? styles.activeContainer : styles.container}
     >
-      <input type="checkbox" name="activeCard" id="activeCard" />
-      <label htmlFor="activeCard">
-        <div
-          className={big ? styles.imageBig : styles.imageSmall}
-          style={{ backgroundImage: `url(${imageUrl})` }}
-        ></div>
-        <div className={big ? styles.textHeaderBig : ''}>
-          <h2>{title}</h2>
-          {big ? <p>{description}</p> : null}
-        </div>
-        {big ? <a onClick={(e) => e.preventDefault()}>Conferir &gt;</a> : null}
-      </label>
+      <Image
+        className={styles.image}
+        src={activeCard ? bigImage : image}
+        alt={imageAlt}
+      ></Image>
+      {/* <div
+        className={activeCard ? styles.activeImage : styles.image}
+        style={{ backgroundImage: `url(${imageUrl})` }}
+      ></div> */}
+      <div className={activeCard ? styles.activeHeader : ''}>
+        <h2>{title}</h2>
+        {activeCard ? <p>{description}</p> : null}
+      </div>
+      {activeCard ? (
+        <a onClick={(e) => e.preventDefault()}>Conferir &gt;</a>
+      ) : null}
     </div>
   );
 }

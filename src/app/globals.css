@@ -18,10 +18,28 @@ body {
   max-width: 100vw;
   overflow-x: hidden;
   font-family: 'Roboto' sans-serif;
-  background-color: #F98988;
+  background-color: #f98988;
 }
 
 a {
   color: inherit;
   text-decoration: none;
+}
+
+.slick-track {
+  display: flex !important;
+  align-items: flex-end;
+}
+
+.slider {
+  height: 50vh;
+  width: 94vw;
+}
+
+.slick-active {
+  width: 301px !important;
+}
+
+.slick-current {
+  width: 600px !important;
 }

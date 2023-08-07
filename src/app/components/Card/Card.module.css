@@ -1,4 +1,4 @@
-.containerBig {
+.activeContainer {
   width: 513px;
   height: 450px;
   background: var(--primary-card-background) no-repeat padding-box;
@@ -12,7 +12,7 @@
   position: relative;
 }
 
-.imageBig {
+.activeImage {
   position: absolute;
   left: -5rem;
   top: -17rem;
@@ -22,25 +22,25 @@
   height: 180%;
 }
 
-.textHeaderBig {
+.activeHeader {
   max-width: 60%;
   align-self: flex-end;
 }
 
-.containerBig h2 {
+.activeContainer h2 {
   padding-bottom: 1.4rem;
   text-align: left;
   font: normal normal 900 67px/61px Roboto;
   color: var(--primary-text);
 }
 
-.containerBig p {
+.activeContainer p {
   text-align: left;
   font: normal normal 300 25px/30px Roboto;
   color: var(--primary-text);
 }
 
-.containerBig a {
+.activeContainer a {
   padding-top: 4rem;
   padding-right: 2.2rem;
   align-self: flex-end;
@@ -49,7 +49,7 @@
   color: var(--primary-text);
 }
 
-.containerSmall {
+.container {
   width: 245px;
   height: 255px;
   background: var(--primary-card-background) no-repeat padding-box;
@@ -61,17 +61,17 @@
   position: relative;
 }
 
-.imageSmall {
+.image {
   position: absolute;
-  left: -3rem;
-  top: -5rem;
-  background-size: contain;
+  left: -6rem;
+  top: -14rem;
+  /* background-size: contain;
   background-repeat: no-repeat;
   width: 150%;
-  height: 160%;
+  height: 160%; */
 }
 
-.containerSmall h2 {
+.container h2 {
   width: 40px;
   text-align: left;
   font: normal normal bold 34px/31px Roboto;
