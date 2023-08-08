@@ -25,21 +25,3 @@ a {
   color: inherit;
   text-decoration: none;
 }
-
-.slick-track {
-  display: flex !important;
-  align-items: flex-end;
-}
-
-.slider {
-  height: 50vh;
-  width: 94vw;
-}
-
-.slick-active {
-  width: 301px !important;
-}
-
-.slick-current {
-  width: 600px !important;
-}
