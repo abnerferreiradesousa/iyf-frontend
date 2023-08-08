@@ -17,10 +17,10 @@ const AsideNavigation = () => {
 
       <Image
         src={'/assets/burguer-menu.png'}
-        width={26}
-        height={26}
+        width={46}
+        height={46}
         className="icon-menu" 
-        alt="Logo do International Youth Fellowship"
+        alt=""
         onClick={toggleMenu} 
       />
 
@@ -30,7 +30,7 @@ const AsideNavigation = () => {
 
         <section className="icon-closed-container">
           <AiOutlineClose
-            style={{fontSize: '28px', color: "#F98988"}}
+            style={{fontSize: '52px', color: "#F98988"}}
             className="icon-closed"
             onClick={toggleMenu} 
           />

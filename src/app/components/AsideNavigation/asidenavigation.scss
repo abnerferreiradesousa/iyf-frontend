@@ -10,8 +10,8 @@ $baseColor: #F98988;
   /* 1A - Make burguer menu stay behind the navigation menu */
   position: relative;
   color: #fff;
-  margin-top: 54px;
-  margin-right: 40px;
+  margin-top: 82px;
+  margin-right: 5.7rem;
   cursor: pointer;
 }
 
@@ -21,8 +21,8 @@ $baseColor: #F98988;
 }
 
 .icon-closed {
-  margin-top: 53px;
-  margin-right: 38px;
+  margin-top: 5rem;
+  margin-right: 5.5rem;
   cursor: pointer;
 }
 
@@ -51,14 +51,14 @@ $baseColor: #F98988;
 }
 
 .barra-menu-opened {
-  width: 420px;
+  width: 625px;
 }
 
 .nav-item {
   color: $baseColor;
   text-decoration: none;
-  font: normal normal 300 35px/45px Roboto;
-  line-height: 4rem;
+  font: normal normal 300 50px/60px Roboto;
+  line-height: 6.5rem;
   transition: 0.4s;
 }
 

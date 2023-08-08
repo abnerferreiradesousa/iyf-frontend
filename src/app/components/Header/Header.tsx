@@ -6,8 +6,8 @@ const Header = () => {
       <header className="header-container">
         <section className="header-logo">
           <Image
-            width={176}
-            height={50}
+            width={290}
+            height={80}
             quality={100}
             src="/assets/iyf-full-logo-branco.png"
             alt="logo"
@@ -16,20 +16,23 @@ const Header = () => {
 
         <section className="header-social-media">
           <Image
-            width={24}
-            height={24}
+            width={44}
+            height={44}
+            style={{'borderRadius': '35%'}}
             src="/assets/Youtube.png"
             alt="logo"
           />
           <Image
-            width={24}
-            height={24}
+            width={44}
+            height={44}
+            style={{'borderRadius': '35%'}}
             src="/assets/facebook.png"
             alt="logo"
           />
           <Image
-            width={24}
-            height={24}
+            width={44}
+            height={44}
+            style={{'borderRadius': '35%'}}
             src="/assets/Instagram.png"
             alt="logo"
           />

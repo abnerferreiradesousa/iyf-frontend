@@ -42,8 +42,8 @@ export default function Home() {
 
   return (
     <main className={styles.main} style={{ background: background.color }}>
-      {/* <Header />
-      <AsideNavigation /> */}
+      <Header />
+      <AsideNavigation />
       <div
         className={styles.backgroundImage}
         style={{ backgroundImage: `url(${background.image})` }}
