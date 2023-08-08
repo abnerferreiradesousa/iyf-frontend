@@ -4,41 +4,20 @@ import styles from './page.module.css';
 import Card from './components/Card/Card';
 import AsideNavigation from './components/AsideNavigation/AsideNavigation';
 import Header from './components/Header/Header';
-import Slider from 'react-slick';
-import Julio from '../../public/images/Julio.webp';
-import Missionario from '../../public/images/Missionario.webp';
-import WorldCamp from '../../public/images/WorldCamp.webp';
-import Thayse from '../../public/images/Thayse.webp';
-import Voluntaria from '../../public/images/Voluntaria.webp';
-
-import 'slick-carousel/slick/slick.css';
-import 'slick-carousel/slick/slick-theme.css';
 
 export default function Home() {
   const [background, setBackground] = useState({
     color: 'radial-gradient(closest-side at 50% 50%, #FEC1C3 0%, #F98988 100%)',
     image: '/images/32.webp',
   });
-  const [activeCard, setActiveCard] = useState({
-    first: true,
-    second: false,
-    third: false,
-    fourth: false,
-    fifth: false,
-  });
   const [clickEnabled, setClickEnabled] = useState(true);
-
-  const settings = {
-    focusOnSelect: true,
-    infinite: true,
-    slidesToShow: 5,
-    slidesToScroll: 1,
-    speed: 1000,
-    arrows: false,
-    swipe: false,
-    // variableWidth: true,
-    className: 'slider',
-  };
+  const [order, setOrder] = useState({
+    first: 1,
+    second: 2,
+    third: 3,
+    fourth: 4,
+    fifth: 5,
+  });
 
   return (
     <main className={styles.main} style={{ background: background.color }}>
@@ -49,27 +28,34 @@ export default function Home() {
         style={{ backgroundImage: `url(${background.image})` }}
       ></div>
       <h1>Desafio Mudança União</h1>
-      <Slider {...settings}>
+      <div className={styles.cardsContainer}>
         <Card
           title="Korea Camp"
           description="Imersão na cultura inglesa levando esperança"
-          activeCard={activeCard.first}
-          image={Julio}
-          bigImage={Julio}
+          image={'/../public/images/Julio.webp'}
           imageAlt="Julio"
+          width={167}
+          height={493}
+          activeWidth={313}
+          activeHeight={906}
+          top="-10.5rem"
+          left="-4rem"
+          activeTop="-22rem"
+          activeLeft="-5rem"
+          order={order.first}
           onClick={() => {
-            if (clickEnabled) {
+            if (clickEnabled && order.first != 1) {
               setBackground({
                 color:
                   'radial-gradient(closest-side at 50% 50%, #FEC1C3 0%, #F98988 100%)',
                 image: '/images/32.webp',
               });
-              setActiveCard({
-                first: true,
-                second: false,
-                third: false,
-                fourth: false,
-                fifth: false,
+              setOrder({
+                first: 1,
+                second: order.second + 1,
+                third: order.third + 1,
+                fourth: order.fourth + 1,
+                fifth: order.fifth + 1,
               });
               setClickEnabled(false);
               setTimeout(() => setClickEnabled(true), 1000);
@@ -79,23 +65,30 @@ export default function Home() {
         <Card
           title="Good News Corp"
           description="Vendo a minha juventude para comprar o coração deles"
-          activeCard={activeCard.second}
-          image={Missionario}
-          bigImage={Missionario}
+          image={'/../public/images/Missionario2x.webp'}
+          width={272}
+          height={563}
+          activeWidth={464}
+          activeHeight={958}
+          top="-14rem"
+          left="-6rem"
+          activeTop="-25rem"
+          activeLeft="-7.5rem"
           imageAlt="Missionario Voluntário"
+          order={order.second}
           onClick={() => {
-            if (clickEnabled) {
+            if (clickEnabled && order.second != 1) {
               setBackground({
                 color:
                   'radial-gradient(closest-side at 50% 50%, #bdd5f2 0%, #588eea 100%)',
                 image: '/images/gnc1.webp',
               });
-              setActiveCard({
-                first: false,
-                second: true,
-                third: false,
-                fourth: false,
-                fifth: false,
+              setOrder({
+                first: order.first + 1,
+                second: 1,
+                third: order.third + 1,
+                fourth: order.fourth + 1,
+                fifth: order.fifth + 1,
               });
               setClickEnabled(false);
               setTimeout(() => setClickEnabled(true), 1000);
@@ -105,23 +98,30 @@ export default function Home() {
         <Card
           title="World Camp"
           description="Viaje o mundo em um só lugar!"
-          activeCard={activeCard.third}
-          image={WorldCamp}
-          bigImage={WorldCamp}
+          image={'/../public/images/WorldCamp2x.webp'}
+          width={273}
+          height={381}
+          activeWidth={505}
+          activeHeight={650}
           imageAlt="World Camp"
+          top="-2rem"
+          left="-3rem"
+          activeTop="-6rem"
+          activeLeft="-3rem"
+          order={order.third}
           onClick={() => {
-            if (clickEnabled) {
+            if (clickEnabled && order.third != 1) {
               setBackground({
                 color:
                   'radial-gradient(closest-side at 50% 50%, #FFFCAA 0%, #BEB700 100%)',
                 image: '/images/wc2.webp',
               });
-              setActiveCard({
-                first: false,
-                second: false,
-                third: true,
-                fourth: false,
-                fifth: false,
+              setOrder({
+                first: order.first + 1,
+                second: order.second + 1,
+                third: 1,
+                fourth: order.fourth + 1,
+                fifth: order.fifth + 1,
               });
               setClickEnabled(false);
               setTimeout(() => setClickEnabled(true), 1000);
@@ -131,23 +131,30 @@ export default function Home() {
         <Card
           title="Noite Cultural"
           description="Viaje o mundo em uma noite sem sair do lugar!"
-          activeCard={activeCard.fourth}
-          image={Thayse}
-          bigImage={Thayse}
+          image={'/../public/images/Thayse2x.webp'}
+          width={179}
+          height={426}
+          activeWidth={344}
+          activeHeight={819}
           imageAlt="Thayse"
+          top="-5rem"
+          left="-3rem"
+          activeTop="-18rem"
+          activeLeft="-5rem"
+          order={order.fourth}
           onClick={() => {
-            if (clickEnabled) {
+            if (clickEnabled && order.fourth != 1) {
               setBackground({
                 color:
                   'radial-gradient(closest-side at 50% 50%, #70DCAF 0%, #0B956B 100%)',
                 image: '/images/mo.webp',
               });
-              setActiveCard({
-                first: false,
-                second: false,
-                third: false,
-                fourth: true,
-                fifth: false,
+              setOrder({
+                first: order.first + 1,
+                second: order.second + 1,
+                third: order.third + 1,
+                fourth: 1,
+                fifth: order.fifth + 1,
               });
               setClickEnabled(false);
               setTimeout(() => setClickEnabled(true), 1000);
@@ -157,150 +164,37 @@ export default function Home() {
         <Card
           title="English Camp"
           description="Ganhe esperança English Camp Online 2022"
-          activeCard={activeCard.fifth}
-          image={Voluntaria}
-          bigImage={Voluntaria}
+          image={'/../public/images/Voluntaria2x.webp'}
+          width={195}
+          height={327}
+          activeWidth={422}
+          activeHeight={705}
           imageAlt="Voluntária"
+          top="-3rem"
+          left="-3rem"
+          activeTop="-15rem"
+          activeLeft="-4.5rem"
+          order={order.fifth}
           onClick={() => {
-            if (clickEnabled) {
+            if (clickEnabled && order.fifth != 1) {
               setBackground({
                 color:
                   'radial-gradient(closest-side at 50% 50%, #7DB9FF 0%, #216AE8 100%)',
                 image: '/images/ec-2.webp',
               });
-              setActiveCard({
-                first: false,
-                second: false,
-                third: false,
-                fourth: false,
-                fifth: true,
+              setOrder({
+                first: order.first + 1,
+                second: order.second + 1,
+                third: order.third + 1,
+                fourth: order.fourth + 1,
+                fifth: 1,
               });
               setClickEnabled(false);
               setTimeout(() => setClickEnabled(true), 1000);
             }
           }}
         ></Card>
-        <Card
-          title="Korea Camp"
-          description="Imersão na cultura inglesa levando esperança"
-          activeCard={activeCard.first}
-          imageUrl="/images/Julio.webp"
-          onClick={() => {
-            if (clickEnabled) {
-              setBackground({
-                color:
-                  'radial-gradient(closest-side at 50% 50%, #FEC1C3 0%, #F98988 100%)',
-                image: '/images/32.webp',
-              });
-              setActiveCard({
-                first: true,
-                second: false,
-                third: false,
-                fourth: false,
-                fifth: false,
-              });
-              setClickEnabled(false);
-              setTimeout(() => setClickEnabled(true), 1000);
-            }
-          }}
-        ></Card>
-        <Card
-          title="Good News Corp"
-          description="Vendo a minha juventude para comprar o coração deles"
-          activeCard={activeCard.second}
-          imageUrl="/images/Missionario.webp"
-          onClick={() => {
-            if (clickEnabled) {
-              setBackground({
-                color:
-                  'radial-gradient(closest-side at 50% 50%, #bdd5f2 0%, #588eea 100%)',
-                image: '/images/gnc1.webp',
-              });
-              setActiveCard({
-                first: false,
-                second: true,
-                third: false,
-                fourth: false,
-                fifth: false,
-              });
-              setClickEnabled(false);
-              setTimeout(() => setClickEnabled(true), 1000);
-            }
-          }}
-        ></Card>
-        <Card
-          title="World Camp"
-          description="Viaje o mundo em um só lugar!"
-          activeCard={activeCard.third}
-          imageUrl="/images/WorldCamp.webp"
-          onClick={() => {
-            if (clickEnabled) {
-              setBackground({
-                color:
-                  'radial-gradient(closest-side at 50% 50%, #FFFCAA 0%, #BEB700 100%)',
-                image: '/images/wc2.webp',
-              });
-              setActiveCard({
-                first: false,
-                second: false,
-                third: true,
-                fourth: false,
-                fifth: false,
-              });
-              setClickEnabled(false);
-              setTimeout(() => setClickEnabled(true), 1000);
-            }
-          }}
-        ></Card>
-        <Card
-          title="Noite Cultural"
-          description="Viaje o mundo em uma noite sem sair do lugar!"
-          activeCard={activeCard.fourth}
-          imageUrl="/images/Thayse.webp"
-          onClick={() => {
-            if (clickEnabled) {
-              setBackground({
-                color:
-                  'radial-gradient(closest-side at 50% 50%, #70DCAF 0%, #0B956B 100%)',
-                image: '/images/mo.webp',
-              });
-              setActiveCard({
-                first: false,
-                second: false,
-                third: false,
-                fourth: true,
-                fifth: false,
-              });
-              setClickEnabled(false);
-              setTimeout(() => setClickEnabled(true), 1000);
-            }
-          }}
-        ></Card>
-        <Card
-          title="English Camp"
-          description="Ganhe esperança English Camp Online 2022"
-          activeCard={activeCard.fifth}
-          imageUrl="/images/Voluntaria.webp"
-          onClick={() => {
-            if (clickEnabled) {
-              setBackground({
-                color:
-                  'radial-gradient(closest-side at 50% 50%, #7DB9FF 0%, #216AE8 100%)',
-                image: '/images/ec-2.webp',
-              });
-              setActiveCard({
-                first: false,
-                second: false,
-                third: false,
-                fourth: false,
-                fifth: true,
-              });
-              setClickEnabled(false);
-              setTimeout(() => setClickEnabled(true), 1000);
-            }
-          }}
-        ></Card>
-      </Slider>
+      </div>
     </main>
   );
 }

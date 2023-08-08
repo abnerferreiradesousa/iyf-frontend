@@ -4,9 +4,16 @@ import { FormEventHandler, MouseEventHandler } from 'react';
 export default interface CardProps {
   title: string;
   description: string;
-  activeCard: boolean;
-  image: StaticImport;
-  bigImage: StaticImport;
+  image: string;
   imageAlt: string;
+  width: number;
+  height: number;
+  activeWidth: number;
+  activeHeight: number;
+  top: string;
+  left: string;
+  activeTop: string;
+  activeLeft: string;
+  order: number;
   onClick: MouseEventHandler<HTMLDivElement>;
 }
