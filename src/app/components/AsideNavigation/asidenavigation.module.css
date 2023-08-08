@@ -2,6 +2,7 @@
   position: fixed;
   top: 0;
   right: 0;
+  z-index: 10;
 }
 
 .iconMenu {
@@ -20,8 +21,7 @@
   right: 0;
 
   transition: 0.3s all;
-  background: #ffffff 0% 0% no-repeat padding-box;
-  opacity: 0.91;
+  background: rgba(255, 255, 255, 0.91) 0% 0% no-repeat padding-box;
   height: 100vh;
 }
 
@@ -53,7 +53,6 @@
 }
 
 .navItem {
-  color: #f98988;
   text-decoration: none;
   font: normal normal 300 35px/45px Roboto;
   line-height: 4rem;
@@ -62,5 +61,4 @@
 
 .navItem:hover {
   color: #fff;
-  background-color: #f98988;
 }
