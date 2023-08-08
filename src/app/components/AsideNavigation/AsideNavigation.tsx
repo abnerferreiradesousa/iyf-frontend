@@ -3,7 +3,7 @@ import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { AiOutlineClose } from "react-icons/ai";
-import "./asidenavigation.scss";
+import styles from "./asidenavigation.module.css";
 
 const AsideNavigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -13,34 +13,37 @@ const AsideNavigation = () => {
   };
 
   return (
-    <aside className="lateral-menu">
+    <aside className={styles.lateralMenu}>
 
       <Image
         src={'/assets/burguer-menu.png'}
         width={26}
         height={26}
-        className="icon-menu" 
+        className={styles.iconMenu} 
         alt="Logo do International Youth Fellowship"
         onClick={toggleMenu} 
       />
 
       <section 
-        className={`barra-menu ${isMenuOpen ? 'barra-menu-opened' : 'barra-menu-closed'}`}
+        className={`
+          ${styles.barMenu} 
+          ${isMenuOpen ? styles.menuOpened : styles.menuClosed
+          }`}
       >
 
-        <section className="icon-closed-container">
+        <section className={styles.closedContainer}>
           <AiOutlineClose
             style={{fontSize: '28px', color: "#F98988"}}
-            className="icon-closed"
+            className={styles.iconClosed}
             onClick={toggleMenu} 
           />
         </section>
 
-        <section className="navigation-menu">
-          <Link href="#" className="nav-item">Institucional</Link>
-          <Link href="#" className="nav-item">Cultura</Link>
-          <Link href="#" className="nav-item">Educação</Link>
-          <Link href="#" className="nav-item">Social</Link>
+        <section className={styles.navigationMenu}>
+          <Link href="#" className={styles.navItem}>Institucional</Link>
+          <Link href="#" className={styles.navItem}>Cultura</Link>
+          <Link href="#" className={styles.navItem}>Educação</Link>
+          <Link href="#" className={styles.navItem}>Social</Link>
         </section>
 
       </section>
