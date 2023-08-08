@@ -1,0 +1,19 @@
+.headerContainer {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-top: 29px;
+}
+
+.headerContainer img {
+  margin-right: 10px;
+}
+
+.headerLogo {
+  margin-left: 7rem;
+}
+
+.headerSocial {
+  margin-right: 6rem;
+}

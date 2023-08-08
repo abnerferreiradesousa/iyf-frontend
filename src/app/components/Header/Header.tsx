@@ -1,10 +1,10 @@
 import Image from 'next/image';
-import './Header.scss';
+import styles from './header.module.css';
 
 const Header = () => {
   return (
-      <header className="header-container">
-        <section className="header-logo">
+      <header className={styles.headerContainer}>
+        <section className={styles.headerLogo}>
           <Image
             width={290}
             height={80}
@@ -14,7 +14,7 @@ const Header = () => {
           />
         </section>
 
-        <section className="header-social-media">
+        <section className={styles.headerSocial}>
           <Image
             width={44}
             height={44}
