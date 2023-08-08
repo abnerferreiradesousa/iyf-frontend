@@ -9,6 +9,7 @@ export default function Home() {
   const [background, setBackground] = useState({
     color: 'radial-gradient(closest-side at 50% 50%, #FEC1C3 0%, #F98988 100%)',
     image: '/images/32.webp',
+    asideColor: '#F98988',
   });
   const [clickEnabled, setClickEnabled] = useState(true);
   const [order, setOrder] = useState({
@@ -22,7 +23,7 @@ export default function Home() {
   return (
     <main className={styles.main} style={{ background: background.color }}>
       <Header />
-      <AsideNavigation />
+      <AsideNavigation color={background.asideColor} />
       <div
         className={styles.backgroundImage}
         style={{ backgroundImage: `url(${background.image})` }}
@@ -49,6 +50,7 @@ export default function Home() {
                 color:
                   'radial-gradient(closest-side at 50% 50%, #FEC1C3 0%, #F98988 100%)',
                 image: '/images/32.webp',
+                asideColor: '#F98988',
               });
               setOrder({
                 first: 1,
@@ -82,6 +84,7 @@ export default function Home() {
                 color:
                   'radial-gradient(closest-side at 50% 50%, #bdd5f2 0%, #588eea 100%)',
                 image: '/images/gnc1.webp',
+                asideColor: '#3183C9',
               });
               setOrder({
                 first: order.first + 1,
@@ -115,6 +118,7 @@ export default function Home() {
                 color:
                   'radial-gradient(closest-side at 50% 50%, #FFFCAA 0%, #BEB700 100%)',
                 image: '/images/wc2.webp',
+                asideColor: '#BEB700',
               });
               setOrder({
                 first: order.first + 1,
@@ -148,6 +152,7 @@ export default function Home() {
                 color:
                   'radial-gradient(closest-side at 50% 50%, #70DCAF 0%, #0B956B 100%)',
                 image: '/images/mo.webp',
+                asideColor: '#0B956B',
               });
               setOrder({
                 first: order.first + 1,
@@ -181,6 +186,7 @@ export default function Home() {
                 color:
                   'radial-gradient(closest-side at 50% 50%, #7DB9FF 0%, #216AE8 100%)',
                 image: '/images/ec-2.webp',
+                asideColor: '#216BE8',
               });
               setOrder({
                 first: order.first + 1,
