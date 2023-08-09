@@ -6,10 +6,10 @@ export default interface CardProps {
   description: string;
   image: string;
   imageAlt: string;
-  width: number;
-  height: number;
-  activeWidth: number;
-  activeHeight: number;
+  width: string;
+  height: string;
+  activeWidth: string;
+  activeHeight: string;
   top: string;
   left: string;
   activeTop: string;

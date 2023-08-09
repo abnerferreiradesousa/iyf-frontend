@@ -3,14 +3,14 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 2rem 6rem 2rem;
+  padding: 2.5rem 2% 5rem 5%;
   min-height: 100vh;
 }
 
 .main h1 {
   max-width: 369px;
   max-height: 285px;
-  margin-left: -10rem;
+  margin-left: -11%;
   text-align: left;
   font: normal normal 900 4.7vw/4.7vw Roboto;
   color: var(--primary-text);
@@ -35,4 +35,5 @@
   width: 100%;
   position: relative;
   align-items: flex-end;
+  height: 42vh;
 }

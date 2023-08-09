@@ -1,58 +1,46 @@
 .activeContainer {
-  width: 513px;
-  height: 450px;
+  width: 27.65%;
+  height: 100%;
   background: var(--primary-card-background) no-repeat padding-box;
   box-shadow: 0px 9px 15px #00000029;
   border-radius: var(--border-radius);
   color: var(--primary-text);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
   position: relative;
   transition: 0.7s;
 }
 
-.activeImage {
-  position: absolute;
-  left: -5rem;
-  top: -17rem;
-  background-size: contain;
-  background-repeat: no-repeat;
-  width: 180%;
-  height: 180%;
-}
-
 .activeHeader {
+  position: absolute;
+  top: 12%;
+  left: 40%;
   max-width: 60%;
-  align-self: flex-end;
 }
 
 .activeContainer h2 {
-  padding-bottom: 1.4rem;
+  padding-bottom: 7%;
   text-align: left;
-  font: normal normal 900 67px/61px Roboto;
+  font: normal normal 900 3.3vw/3.18vw Roboto;
   color: var(--primary-text);
 }
 
 .activeContainer p {
   text-align: left;
-  font: normal normal 300 25px/30px Roboto;
+  font: normal normal 300 1.1vw/1.3vw Roboto;
   color: var(--primary-text);
 }
 
 .activeContainer a {
-  padding-top: 4rem;
-  padding-right: 2.2rem;
-  align-self: flex-end;
+  position: absolute;
+  bottom: 12%;
+  right: 8%;
   text-align: left;
-  font: normal normal 900 26px/32px Roboto;
+  font: normal normal 900 1.55vw/1.65vw Roboto;
   color: var(--primary-text);
 }
 
 .container {
-  width: 245px;
-  height: 255px;
+  width: 13.2%;
+  height: 56.55%;
   background: var(--primary-card-background) no-repeat padding-box;
   box-shadow: 0px 9px 15px #00000029;
   border-radius: var(--border-radius);
@@ -73,6 +61,6 @@
 .container h2 {
   width: 40px;
   text-align: left;
-  font: normal normal bold 34px/31px Roboto;
+  font: normal normal bold 2vw/1.8vw Roboto;
   color: var(--primary-text);
 }

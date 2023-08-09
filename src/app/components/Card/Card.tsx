@@ -28,9 +28,11 @@ export default function Card({
         className={styles.image}
         src={image}
         alt={imageAlt}
-        width={order == 1 ? activeWidth : width}
-        height={order == 1 ? activeHeight : height}
+        width={500}
+        height={500}
         style={{
+          width: order == 1 ? activeWidth : width,
+          height: order == 1 ? activeHeight : height,
           top: order == 1 ? activeTop : top,
           left: order == 1 ? activeLeft : left,
         }}

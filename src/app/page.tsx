@@ -29,20 +29,20 @@ export default function Home() {
         style={{ backgroundImage: `url(${background.image})` }}
       ></div>
       <h1>Desafio Mudança União</h1>
-      <div className={styles.cardsContainer}>
+      <section className={styles.cardsContainer}>
         <Card
           title="Korea Camp"
           description="Imersão na cultura inglesa levando esperança"
           image={'/../public/images/Julio.webp'}
           imageAlt="Julio"
-          width={167}
-          height={493}
-          activeWidth={313}
-          activeHeight={906}
-          top="-10.5rem"
-          left="-4rem"
-          activeTop="-22rem"
-          activeLeft="-5rem"
+          width={'68.5%'}
+          height={'193.4%'}
+          activeWidth={'61%'}
+          activeHeight={'201%'}
+          top="-66%"
+          left="-22%"
+          activeTop="-78%"
+          activeLeft="-15%"
           order={order.first}
           onClick={() => {
             if (clickEnabled && order.first != 1) {
@@ -68,21 +68,21 @@ export default function Home() {
           title="Good News Corp"
           description="Vendo a minha juventude para comprar o coração deles"
           image={'/../public/images/Missionario2x.webp'}
-          width={272}
-          height={563}
-          activeWidth={464}
-          activeHeight={958}
-          top="-14rem"
-          left="-6rem"
-          activeTop="-25rem"
-          activeLeft="-7.5rem"
+          width={'111%'}
+          height={'221%'}
+          activeWidth={'90.5%'}
+          activeHeight={'212.5%'}
+          top="-90%"
+          left="-36%"
+          activeTop="-87%"
+          activeLeft="-25%"
           imageAlt="Missionario Voluntário"
           order={order.second}
           onClick={() => {
             if (clickEnabled && order.second != 1) {
               setBackground({
                 color:
-                  'radial-gradient(closest-side at 50% 50%, #bdd5f2 0%, #588eea 100%)',
+                  'radial-gradient(closest-side at 50% 50%, #52D1FB 0%, #3183C9 100%)',
                 image: '/images/gnc1.webp',
                 asideColor: '#3183C9',
               });
@@ -102,15 +102,15 @@ export default function Home() {
           title="World Camp"
           description="Viaje o mundo em um só lugar!"
           image={'/../public/images/WorldCamp2x.webp'}
-          width={273}
-          height={381}
-          activeWidth={505}
-          activeHeight={650}
+          width={'111.5%'}
+          height={'149.5%'}
+          activeWidth={'98.5%'}
+          activeHeight={'144%'}
           imageAlt="World Camp"
-          top="-2rem"
-          left="-3rem"
-          activeTop="-6rem"
-          activeLeft="-3rem"
+          top="-14%"
+          left="-12%"
+          activeTop="-24%"
+          activeLeft="-9%"
           order={order.third}
           onClick={() => {
             if (clickEnabled && order.third != 1) {
@@ -136,15 +136,15 @@ export default function Home() {
           title="Noite Cultural"
           description="Viaje o mundo em uma noite sem sair do lugar!"
           image={'/../public/images/Thayse2x.webp'}
-          width={179}
-          height={426}
-          activeWidth={344}
-          activeHeight={819}
+          width={'73%'}
+          height={'167%'}
+          activeWidth={'65.1%'}
+          activeHeight={'182%'}
           imageAlt="Thayse"
-          top="-5rem"
-          left="-3rem"
-          activeTop="-18rem"
-          activeLeft="-5rem"
+          top="-34%"
+          left="-18%"
+          activeTop="-64%"
+          activeLeft="-13%"
           order={order.fourth}
           onClick={() => {
             if (clickEnabled && order.fourth != 1) {
@@ -170,15 +170,15 @@ export default function Home() {
           title="English Camp"
           description="Ganhe esperança English Camp Online 2022"
           image={'/../public/images/Voluntaria2x.webp'}
-          width={195}
-          height={327}
-          activeWidth={422}
-          activeHeight={705}
+          width={'80%'}
+          height={'128%'}
+          activeWidth={'82.3%'}
+          activeHeight={'156.3%'}
           imageAlt="Voluntária"
-          top="-3rem"
-          left="-3rem"
-          activeTop="-15rem"
-          activeLeft="-4.5rem"
+          top="-21%"
+          left="-16%"
+          activeTop="-53%"
+          activeLeft="-13.5%"
           order={order.fifth}
           onClick={() => {
             if (clickEnabled && order.fifth != 1) {
@@ -200,7 +200,7 @@ export default function Home() {
             }
           }}
         ></Card>
-      </div>
+      </section>
     </main>
   );
 }
