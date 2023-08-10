@@ -10,10 +10,21 @@
 .main h1 {
   max-width: 369px;
   max-height: 285px;
-  margin-left: -11%;
+  margin-left: -6%;
   text-align: left;
-  font: normal normal 900 4.7vw/4.7vw Roboto;
+  font: normal normal 900 4.2vw/4.2vw Roboto;
   color: var(--primary-text);
+}
+
+@media only screen and (min-width: 1920px) {
+  .main h1 {
+    max-width: 369px;
+    max-height: 285px;
+    margin-left: -14%;
+    text-align: left;
+    font: normal normal 900 89px/89px Roboto;
+    color: var(--primary-text);
+  }
 }
 
 .backgroundImage {

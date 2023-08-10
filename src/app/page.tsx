@@ -60,7 +60,7 @@ export default function Home() {
                 fifth: order.fifth + 1,
               });
               setClickEnabled(false);
-              setTimeout(() => setClickEnabled(true), 1000);
+              setTimeout(() => setClickEnabled(true), 800);
             }
           }}
         ></Card>
@@ -94,7 +94,7 @@ export default function Home() {
                 fifth: order.fifth + 1,
               });
               setClickEnabled(false);
-              setTimeout(() => setClickEnabled(true), 1000);
+              setTimeout(() => setClickEnabled(true), 800);
             }
           }}
         ></Card>
@@ -128,7 +128,7 @@ export default function Home() {
                 fifth: order.fifth + 1,
               });
               setClickEnabled(false);
-              setTimeout(() => setClickEnabled(true), 1000);
+              setTimeout(() => setClickEnabled(true), 800);
             }
           }}
         ></Card>
@@ -162,7 +162,7 @@ export default function Home() {
                 fifth: order.fifth + 1,
               });
               setClickEnabled(false);
-              setTimeout(() => setClickEnabled(true), 1000);
+              setTimeout(() => setClickEnabled(true), 800);
             }
           }}
         ></Card>
@@ -196,7 +196,7 @@ export default function Home() {
                 fifth: 1,
               });
               setClickEnabled(false);
-              setTimeout(() => setClickEnabled(true), 1000);
+              setTimeout(() => setClickEnabled(true), 800);
             }
           }}
         ></Card>

@@ -3,7 +3,7 @@
   display: flex;
   justify-content: space-between;
   align-items: baseline;
-  margin-top: 29px;
+  height: 6vh;
 }
 
 .headerContainer img {
@@ -11,9 +11,12 @@
 }
 
 .headerLogo {
-  margin-left: 7rem;
+  margin-left: 4rem;
+  height: 100%;
 }
 
 .headerSocial {
   margin-right: 6rem;
+  height: 100%;
+  width: 12%;
 }
