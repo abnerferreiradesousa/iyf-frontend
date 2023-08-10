@@ -1,0 +1,66 @@
+.activeContainer {
+  width: 27.65%;
+  height: 100%;
+  background: var(--primary-card-background) no-repeat padding-box;
+  box-shadow: 0px 9px 15px #00000029;
+  border-radius: var(--border-radius);
+  color: var(--primary-text);
+  position: relative;
+  transition: 0.7s;
+}
+
+.activeHeader {
+  position: absolute;
+  top: 12%;
+  left: 40%;
+  max-width: 60%;
+}
+
+.activeContainer h2 {
+  padding-bottom: 7%;
+  text-align: left;
+  font: normal normal 900 3.3vw/3.18vw Roboto;
+  color: var(--primary-text);
+}
+
+.activeContainer p {
+  text-align: left;
+  font: normal normal 300 1.1vw/1.3vw Roboto;
+  color: var(--primary-text);
+}
+
+.activeContainer a {
+  position: absolute;
+  bottom: 12%;
+  right: 8%;
+  text-align: left;
+  font: normal normal 900 1.55vw/1.65vw Roboto;
+  color: var(--primary-text);
+}
+
+.container {
+  width: 13.2%;
+  height: 56.55%;
+  background: var(--primary-card-background) no-repeat padding-box;
+  box-shadow: 0px 9px 15px #00000029;
+  border-radius: var(--border-radius);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.image {
+  position: absolute;
+  /* background-size: contain;
+  background-repeat: no-repeat;
+  width: 150%;
+  height: 160%; */
+}
+
+.container h2 {
+  width: 40px;
+  text-align: left;
+  font: normal normal bold 2vw/1.8vw Roboto;
+  color: var(--primary-text);
+}

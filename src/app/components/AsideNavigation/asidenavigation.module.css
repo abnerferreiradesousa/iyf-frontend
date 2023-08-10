@@ -1,16 +1,28 @@
-
 .lateralMenu {
   position: fixed;
+  height: 12.5%;
+  width: 7.5%;
   top: 0;
   right: 0;
+  z-index: 10;
+}
+
+@media only screen and (min-width: 1920px) {
+  .lateralMenu {
+    position: fixed;
+    height: 10%;
+    width: 7%;
+    top: 0;
+    right: 0;
+    z-index: 10;
+  }
 }
 
 .iconMenu {
   /* 1A - Make burguer menu stay behind the navigation menu */
   position: relative;
   color: #fff;
-  margin-top: 54px;
-  margin-right: 40px;
+  margin-top: 41%;
   cursor: pointer;
 }
 
@@ -21,8 +33,7 @@
   right: 0;
 
   transition: 0.3s all;
-  background: #FFFFFF 0% 0% no-repeat padding-box;
-  opacity: 0.91;
+  background: rgba(255, 255, 255, 0.91) 0% 0% no-repeat padding-box;
   height: 100vh;
 }
 
@@ -31,7 +42,7 @@
 }
 
 .menuOpened {
-  width: 420px;
+  width: 425%;
 }
 
 .closedContainer {
@@ -40,8 +51,8 @@
 }
 
 .iconClosed {
-  margin-top: 53px;
-  margin-right: 38px;
+  margin-top: 12%;
+  margin-right: 14%;
   cursor: pointer;
 }
 
@@ -54,14 +65,12 @@
 }
 
 .navItem {
-  color: #F98988;
   text-decoration: none;
-  font: normal normal 300 35px/45px Roboto;
-  line-height: 4rem;
+  font: normal normal 300 2.3vw/2.5vw Roboto;
+  line-height: 200%;
   transition: 0.4s;
 }
 
 .navItem:hover {
   color: #fff;
-  background-color: #F98988;
 }
